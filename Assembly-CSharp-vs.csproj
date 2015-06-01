@@ -47,9 +47,11 @@
   </ItemGroup>
   <ItemGroup>
      <Compile Include="Assets\Sprites\moving.cs" />
+     <Compile Include="Assets\samples\GameObject\CallectableTest.cs" />
      <Compile Include="Assets\samples\GameObject\CollectableItem.cs" />
      <Compile Include="Assets\samples\Inventory\Inventory.cs" />
      <Compile Include="Assets\samples\Inventory\InventoryTest.cs" />
+     <Compile Include="Assets\samples\Inventory\InventoryTestItem.cs" />
      <Compile Include="Assets\samples\SwitchManager.cs" />
      <Compile Include="Assets\samples\pixelPerfect.cs" />
  <Reference Include="UnityEngine.UI">
