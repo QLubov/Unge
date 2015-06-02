@@ -83,7 +83,7 @@ public class InventoryTest : MonoBehaviour
     // Use this for initialization
     void Start()
     {
-        float invWidth = 2 * leftOffset + cellCount * cellSize + cellCount * offset + offset;
+        float invWidth = cellCount * cellSize + cellCount * offset + offset;
         float invHeight = cellSize + 2 * offset;
         RectTransform rect = GetComponent<RectTransform>();
 
@@ -96,6 +96,7 @@ public class InventoryTest : MonoBehaviour
         }
         rect.SetSizeWithCurrentAnchors(RectTransform.Axis.Horizontal, invWidth);
         rect.SetSizeWithCurrentAnchors(RectTransform.Axis.Vertical, invHeight);
+        InitBorders(invHeight);
     }
 
     public void AddItem(Sprite sprite)
@@ -110,5 +111,16 @@ public class InventoryTest : MonoBehaviour
     void Update()
     {
 
+    }
+
+    void InitBorders(float invHeight)
+    {
+        RectTransform lBorder = gameObject.transform.FindChild("Left Border").GetComponent<RectTransform>();
+        RectTransform rBorder = gameObject.transform.FindChild("Right Border").GetComponent<RectTransform>();
+
+        lBorder.localPosition = new Vector3((-cellCount / 2.0f) * (cellSize + offset) - (lBorder.rect.width / 2.0f), 0);
+        rBorder.localPosition = new Vector3((cellCount / 2.0f) * (cellSize + offset) + (lBorder.rect.width / 2.0f), 0);
+        lBorder.SetSizeWithCurrentAnchors(RectTransform.Axis.Vertical, invHeight);
+        rBorder.SetSizeWithCurrentAnchors(RectTransform.Axis.Vertical, invHeight);
     }
 }
