@@ -49,6 +49,7 @@
      <Compile Include="Assets\Sprites\moving.cs" />
      <Compile Include="Assets\samples\GameObject\CallectableTest.cs" />
      <Compile Include="Assets\samples\GameObject\CollectableItem.cs" />
+     <Compile Include="Assets\samples\GameObject\ToggleObject.cs" />
      <Compile Include="Assets\samples\Inventory\Inventory.cs" />
      <Compile Include="Assets\samples\Inventory\InventoryTest.cs" />
      <Compile Include="Assets\samples\Inventory\InventoryTestItem.cs" />
