@@ -47,17 +47,11 @@
   </ItemGroup>
   <ItemGroup>
      <Compile Include="Assets\Sprites\moving.cs" />
-     <Compile Include="Assets\samples\GameObject\CallectableTest.cs" />
-     <Compile Include="Assets\samples\GameObject\CollectableItem.cs" />
-     <Compile Include="Assets\samples\GameObject\RTCreator.cs" />
-     <Compile Include="Assets\samples\GameObject\ToggleObject.cs" />
-     <Compile Include="Assets\samples\Inventory\Inventory.cs" />
-     <Compile Include="Assets\samples\Inventory\InventoryTest.cs" />
-     <Compile Include="Assets\samples\Inventory\InventoryTestItem.cs" />
-     <Compile Include="Assets\samples\InventoryTestLoad.cs" />
-     <Compile Include="Assets\samples\SwitchManager.cs" />
-     <Compile Include="Assets\samples\Switcher.cs" />
-     <Compile Include="Assets\samples\pixelPerfect.cs" />
+     <Compile Include="Assets\samples\GameObject\Scripts\CallectableTest.cs" />
+     <Compile Include="Assets\samples\GameObject\Scripts\Switcher.cs" />
+     <Compile Include="Assets\samples\GameObject\Scripts\ToggleObject.cs" />
+     <Compile Include="Assets\samples\Inventory\Scripts\InventoryTest.cs" />
+     <Compile Include="Assets\samples\Inventory\Scripts\InventoryTestItem.cs" />
  <Reference Include="UnityEngine.UI">
  <HintPath>C:/Program Files/Unity/Editor/Data/UnityExtensions/Unity/GUISystem/UnityEngine.UI.dll</HintPath>
  </Reference>
