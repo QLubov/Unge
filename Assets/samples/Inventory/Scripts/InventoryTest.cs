@@ -29,12 +29,12 @@ public class InventorySlot
         return Count == 0;
     }
 
-    public bool AddItem(Sprite sprite)
+    public bool AddItem(Sprite sprite, string tag)
     {
         if (mItem != null)
         {
             var img = mItem.GetComponent<Image>();
-            if (img.sprite.GetHashCode() == sprite.GetHashCode())
+            if (img.sprite.GetHashCode() == sprite.GetHashCode()) //TODO: comparing by tag
             {
                 Count++;
                 UpdateLabel();
@@ -45,16 +45,17 @@ public class InventorySlot
         else
         {
             mItem = new GameObject("Item");
-                       
+            mItem.tag = tag;           
             var img = mItem.AddComponent<Image>();
-
+            mItem.AddComponent<CanvasGroup>();
+            mItem.AddComponent<Drag>();
             var rect = mItem.GetComponent<RectTransform>();
             rect.SetSizeWithCurrentAnchors(RectTransform.Axis.Horizontal, mCellSize - mScaleFactor);
             rect.SetSizeWithCurrentAnchors(RectTransform.Axis.Vertical, mCellSize - mScaleFactor);
             
 
             img.sprite = sprite;
-            Slot.GetComponent<Button>().targetGraphic = img;
+            //Slot.GetComponent<Button>().targetGraphic = img;
             mItem.transform.SetParent(Slot.transform, false);
             mItem.transform.SetAsFirstSibling();
             Count++;
@@ -99,11 +100,11 @@ public class InventoryTest : MonoBehaviour
         InitBorders(invHeight);
     }
 
-    public void AddItem(Sprite sprite)
+    public void AddItem(Sprite sprite, string tag)
     {
         foreach (var slot in slots)
         {
-            if (slot.AddItem(sprite))
+            if (slot.AddItem(sprite, tag))
                 break;
         }
     }

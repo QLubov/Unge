@@ -48,8 +48,10 @@
   <ItemGroup>
      <Compile Include="Assets\Sprites\moving.cs" />
      <Compile Include="Assets\samples\GameObject\Scripts\CallectableTest.cs" />
+     <Compile Include="Assets\samples\GameObject\Scripts\Drop.cs" />
      <Compile Include="Assets\samples\GameObject\Scripts\Switcher.cs" />
      <Compile Include="Assets\samples\GameObject\Scripts\ToggleObject.cs" />
+     <Compile Include="Assets\samples\Inventory\Scripts\Drag.cs" />
      <Compile Include="Assets\samples\Inventory\Scripts\InventoryTest.cs" />
      <Compile Include="Assets\samples\Inventory\Scripts\InventoryTestItem.cs" />
  <Reference Include="UnityEngine.UI">

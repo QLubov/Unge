@@ -16,7 +16,7 @@ public class CallectableTest : MonoBehaviour {
 	}
     void OnMouseDown()
     {
-        inv.AddItem(collected);
+        inv.AddItem(collected, gameObject.tag);
         Destroy(gameObject);
     }
 }
